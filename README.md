@@ -97,7 +97,7 @@ Step 6: Check Running The Site At  <a href="http://localhost:8084/onlinebookstor
 
 Step 7: Default Username And Password For Admin Is "Admin" And "Admin"
 
-Step 8: Default Username And Password For User Is "shashi1" And "shashi1"
+Step 8: Default Username And Password For User Is "shashi" And "shashi1"
 
 
 #### "Suggestions and project Improvements are Invited!"
