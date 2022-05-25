@@ -95,7 +95,7 @@ Step 5: Right Click On Project > Run As > Run On Server > Select Tomcat v8.0 > N
 
 Step 6: Check Running The Site At  <a href="http://localhost:8083/onlinebookstore/">http://localhost:8083/onlinebookstore/</a>
 
-Step 7: Default Username And Password For Admin Is "Admin" And "Admin"
+Step 7: Default Username1 And Password For Admin Is "Admin" And "Admin"
 
 Step 8: Default Username And Password For User Is "shashi" And "shashi"
 
