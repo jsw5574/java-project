@@ -5,7 +5,7 @@
   <version>0.0.2</version>
   <packaging>war</packaging>
   <build>
-    <sourceDirectory>src</sourceDirectory>
+    <sourceDirectory>OnlineBookstore</sourceDirectory>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
