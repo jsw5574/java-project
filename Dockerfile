@@ -25,4 +25,4 @@ RUN echo "tomcat install complete"
 
 EXPOSE 8080
 # WORKDIR /app/tomcat/bin
-CMD ["/apps/tomcat/bin/catalina.sh", "run"]
+CMD $CATALINA_HOME/bin/startup.sh && tail -f $CATALINA_HOME/logs/catalina.out
