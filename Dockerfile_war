@@ -1,5 +1,6 @@
 From sjapp:latest
 
+WORKDIR /apps/
 RUN rm -rf ./webapps/*
 COPY ./target/*.war ./webapps/ROOT.war
 EXPOSE 8080
