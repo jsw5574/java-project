@@ -22,7 +22,7 @@ RUN java -version
 RUN echo "java install complete"
 
 # Tomcat 설치
-RUN wget https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.83/bin/apache-tomcat-8.5.83.tar.gz
+RUN wget https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.83/bin/apache-tomcat-8.5.83.tar.gz
 RUN tar zxvf apache-tomcat-8.5.83.tar.gz
 RUN mv apache-tomcat-8.5.83 /apps/tomcat
 ENV CATALINA_HOME=/apps/tomcat
