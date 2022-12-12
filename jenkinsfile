@@ -1,0 +1,31 @@
+pipeline {
+    agent any
+    tools{
+            maven  'maven3.8'
+        }
+        stages {
+            stage ('Chekout'){
+                steps {
+                     checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: '5180cef0-8654-4b84-920c-1279c75d0fa4', url: 'http://20.214.251.3:8070/root/maven.git']]])
+                        sh 'mvn clean install'
+                }
+            }
+            stage('build the java'){
+                steps{
+                    sh 'docker build -t swjeongacr.azurecr.io/sjapp-test:${BUILD_NUMBER} .'
+                }
+            }
+        
+            stage('azure login and push the docker image to acr hub'){
+                steps{
+                    withCredentials([usernamePassword(credentialsId: 'ACR_CREDENTIALS', passwordVariable: 'password', usernameVariable: 'username')]) {
+                        sh 'docker login -u ${username} -p ${password} swjeongacr.azurecr.io'
+                        sh 'docker push swjeongacr.azurecr.io/sjapp-test:${BUILD_NUMBER}'
+                        sh 'docker image rm -f swjeongacr.azurecr.io/sjapp-test:${BUILD_NUMBER}'
+                      }
+                    }
+                
+            
+        }
+    }
+}
