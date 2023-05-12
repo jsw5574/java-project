@@ -34,7 +34,10 @@ jobs:
           run: mvn -B package --file pom.xml   
         
         - name: find war
-          run: find / -name *.war
+          run: ls -rlt
+        
+        - name: find pwd
+          run: pwd
           
         - name: 'Checkout GitHub Action'
           uses: actions/checkout@main
