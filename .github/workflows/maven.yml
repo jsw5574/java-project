@@ -32,7 +32,8 @@ jobs:
             cache: maven
         - name: Build with Maven
           run: mvn -B package --file pom.xml   
-          run: pwd
+        
+        - name: find war
           run: find / -name *.war
           
         - name: 'Checkout GitHub Action'
