@@ -21,7 +21,7 @@ on:
 jobs:
   build-and-deploy:
         runs-on: ubuntu-latest
-          
+        
         steps:
         - uses: actions/checkout@v3
         - name: Set up JDK 8
@@ -33,7 +33,6 @@ jobs:
         - name: Build with Maven
           run: mvn -B package --file pom.xml   
           
-        steps:
         - name: 'Checkout GitHub Action'
           uses: actions/checkout@main
           
