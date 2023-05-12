@@ -5,8 +5,8 @@ FROM tomcat:8.5-jdk8
 RUN rm -rf /etc/localtime
 RUN ln -s /usr/share/zoneinfo/Asia/Seoul /etc/localtime
 
-COPY */target/*.war /usr/local/tomcat/webapps/ROOT.war
-EXPOSE 8080
+COPY /home/runner/work/java-project/java-project/target/*.war /usr/local/tomcat/webapps/ROOT.war
+#EXPOSE 8080
 CMD $CATALINA_HOME/bin/shutdown.sh
 CMD $CATALINA_HOME/bin/startup.sh && tail -f $CATALINA_HOME/logs/catalina.out
 
