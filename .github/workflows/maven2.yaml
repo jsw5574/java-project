@@ -105,7 +105,7 @@ jobs:
         - name: Deploys application
           uses: Azure/k8s-deploy@v4
           with:
-            namespace: ns-classbox
+            namespace: 'ns-classbox'
             action: deploy
             manifests: ./manifest
 
